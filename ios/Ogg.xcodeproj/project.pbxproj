@@ -236,11 +236,6 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_OPTIMIZATION_LEVEL = 3;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
-				OTHER_CFLAGS = (
-					"$(OTHER_CFLAGS)",
-					"-ffast-math",
-					"-falign-loops=16",
-				);
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
