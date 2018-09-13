@@ -598,7 +598,7 @@ int ogg_stream_eos(ogg_stream_state *os){
 int ogg_sync_init(ogg_sync_state *oy){
   if(oy){
     oy->storage = -1; /* used as a readiness flag */
-    memset(oy,0,sizeof(*oy));
+    memset(oy,0,sizeof(*oy)); // Da fuq? This is plowing the 'readiness flag'
   }
   return(0);
 }
