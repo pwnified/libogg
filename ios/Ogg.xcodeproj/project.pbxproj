@@ -23,6 +23,10 @@
 /* Begin PBXBuildFile section */
 		A4B463C61A90009200298931 /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = 730F236109181A8D00AB638C /* bitwise.c */; };
 		A4B463C71A90009200298931 /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 730F236209181A8D00AB638C /* framing.c */; };
+		A4E679852BC9FE6700D23C9F /* OggXC.docc in Sources */ = {isa = PBXBuildFile; fileRef = A4E679842BC9FE6700D23C9F /* OggXC.docc */; };
+		A4E679862BC9FE6700D23C9F /* OggXC.h in Headers */ = {isa = PBXBuildFile; fileRef = A4E679832BC9FE6700D23C9F /* OggXC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4E6798A2BC9FE9C00D23C9F /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = 730F236109181A8D00AB638C /* bitwise.c */; };
+		A4E6798B2BC9FE9E00D23C9F /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 730F236209181A8D00AB638C /* framing.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,10 +49,20 @@
 		730F236609181ABE00AB638C /* os_types.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = os_types.h; path = ../include/ogg/os_types.h; sourceTree = SOURCE_ROOT; };
 		8D07F2C70486CC7A007CD1D0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A4B463AC1A8FFFFB00298931 /* libogg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libogg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E679812BC9FE6700D23C9F /* OggXC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OggXC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E679832BC9FE6700D23C9F /* OggXC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OggXC.h; sourceTree = "<group>"; };
+		A4E679842BC9FE6700D23C9F /* OggXC.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OggXC.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A4B463A91A8FFFFB00298931 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E6797E2BC9FE6700D23C9F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				A4B463AC1A8FFFFB00298931 /* libogg.a */,
+				A4E679812BC9FE6700D23C9F /* OggXC.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,6 +87,7 @@
 				730F235F09181A3E00AB638C /* Headers */,
 				08FB77ACFE841707C02AAC07 /* Source */,
 				089C1665FE841158C02AAC07 /* Resources */,
+				A4E679822BC9FE6700D23C9F /* OggXC */,
 				034768DDFF38A45A11DB9C8B /* Products */,
 			);
 			name = Ogg;
@@ -104,7 +120,27 @@
 			name = Headers;
 			sourceTree = "<group>";
 		};
+		A4E679822BC9FE6700D23C9F /* OggXC */ = {
+			isa = PBXGroup;
+			children = (
+				A4E679832BC9FE6700D23C9F /* OggXC.h */,
+				A4E679842BC9FE6700D23C9F /* OggXC.docc */,
+			);
+			path = OggXC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A4E6797C2BC9FE6700D23C9F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E679862BC9FE6700D23C9F /* OggXC.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		A4B463AB1A8FFFFB00298931 /* libogg */ = {
@@ -124,6 +160,24 @@
 			productReference = A4B463AC1A8FFFFB00298931 /* libogg.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		A4E679802BC9FE6700D23C9F /* OggXC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4E679892BC9FE6700D23C9F /* Build configuration list for PBXNativeTarget "OggXC" */;
+			buildPhases = (
+				A4E6797C2BC9FE6700D23C9F /* Headers */,
+				A4E6797D2BC9FE6700D23C9F /* Sources */,
+				A4E6797E2BC9FE6700D23C9F /* Frameworks */,
+				A4E6797F2BC9FE6700D23C9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OggXC;
+			productName = OggXC;
+			productReference = A4E679812BC9FE6700D23C9F /* OggXC.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,13 +185,16 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					A4B463A31A8FFE8000298931 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
 					A4B463AB1A8FFFFB00298931 = {
 						CreatedOnToolsVersion = 6.1.1;
+					};
+					A4E679802BC9FE6700D23C9F = {
+						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
@@ -159,9 +216,20 @@
 			targets = (
 				A4B463AB1A8FFFFB00298931 /* libogg */,
 				A4B463A31A8FFE8000298931 /* UniversalLib */,
+				A4E679802BC9FE6700D23C9F /* OggXC */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4E6797F2BC9FE6700D23C9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		A4B463A71A8FFE9B00298931 /* ShellScript */ = {
@@ -189,12 +257,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A4E6797D2BC9FE6700D23C9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E679852BC9FE6700D23C9F /* OggXC.docc in Sources */,
+				A4E6798A2BC9FE9C00D23C9F /* bitwise.c in Sources */,
+				A4E6798B2BC9FE9E00D23C9F /* framing.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		730F235909181A3A00AB638C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
@@ -232,17 +311,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ./include;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 			};
 			name = Debug;
 		};
 		730F235A09181A3A00AB638C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
@@ -282,10 +364,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ./include;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "xrsimulator xros watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTS_MACCATALYST = YES;
 			};
 			name = Release;
 		};
@@ -369,6 +454,119 @@
 			};
 			name = Release;
 		};
+		A4E679872BC9FE6700D23C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FUJX4L72NH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harmonicdog.OggXC;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A4E679882BC9FE6700D23C9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FUJX4L72NH;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harmonicdog.OggXC;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -395,6 +593,15 @@
 			buildConfigurations = (
 				A4B463BE1A8FFFFB00298931 /* Debug */,
 				A4B463BF1A8FFFFB00298931 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4E679892BC9FE6700D23C9F /* Build configuration list for PBXNativeTarget "OggXC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E679872BC9FE6700D23C9F /* Debug */,
+				A4E679882BC9FE6700D23C9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
