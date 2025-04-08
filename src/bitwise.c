@@ -388,19 +388,22 @@ long oggpack_read(oggpack_buffer *b,int bits){
     else if(!bits)return(0L);
   }
 
-  ret=b->ptr[0]>>b->endbit;
-  if(bits>8){
-    ret|=b->ptr[1]<<(8-b->endbit);
-    if(bits>16){
-      ret|=b->ptr[2]<<(16-b->endbit);
-      if(bits>24){
-        ret|=b->ptr[3]<<(24-b->endbit);
-        if(bits>32 && b->endbit){
-          ret|=b->ptr[4]<<(32-b->endbit);
-        }
-      }
-    }
-  }
+	// Too ugly, had to reformat. Runtime warnings here, about shifting values into the sign bit of 'int'
+	// So just apply a cast to an unsigned type to silence the warning.
+	ret = (uint32_t)b->ptr[0] >> b->endbit;
+	if (bits > 8) {
+		ret |= (uint32_t)b->ptr[1] << (8 - b->endbit);
+		if (bits > 16) {
+			ret |= (uint32_t)b->ptr[2] << (16 - b->endbit);
+			if (bits > 24) {
+				ret |= (uint32_t)b->ptr[3] << (24 - b->endbit);
+				if (bits > 32 && b->endbit) {
+					ret |= (uint32_t)b->ptr[4] << (32 - b->endbit);
+				}
+			}
+		}
+	}
+
   ret&=m;
   b->ptr+=bits/8;
   b->endbyte+=bits/8;

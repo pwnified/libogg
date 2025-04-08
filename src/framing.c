@@ -57,17 +57,17 @@ ogg_int64_t ogg_page_granulepos(const ogg_page *og){
 }
 
 int ogg_page_serialno(const ogg_page *og){
-  return(og->header[14] |
-         (og->header[15]<<8) |
-         (og->header[16]<<16) |
-         (og->header[17]<<24));
+  return((uint32_t)og->header[14] |
+         ((uint32_t)og->header[15]<<8) |
+         ((uint32_t)og->header[16]<<16) |
+         ((uint32_t)og->header[17]<<24)); // Left shift of 251 by 24 places cannot be represented in type 'int'
 }
 
 long ogg_page_pageno(const ogg_page *og){
-  return(og->header[18] |
-         (og->header[19]<<8) |
-         (og->header[20]<<16) |
-         (og->header[21]<<24));
+  return((uint32_t)og->header[18] |
+         ((uint32_t)og->header[19]<<8) |
+         ((uint32_t)og->header[20]<<16) |
+         ((uint32_t)og->header[21]<<24));
 }
 
 
@@ -186,7 +186,7 @@ static const ogg_uint32_t crc_lookup[256]={
 
 /* init the encode/decode logical stream state */
 
-int ogg_stream_init(ogg_stream_state *os,int serialno){
+int ogg_stream_init(ogg_stream_state *os, int serialno) {
   if(os){
     memset(os,0,sizeof(*os));
     os->body_storage=16*1024;
