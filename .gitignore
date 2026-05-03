@@ -1,3 +1,5 @@
 ios/Ogg.xcodeproj/xcuserdata
 ios/Ogg.xcodeproj/project.xcworkspace/xcuserdata
 ios/Ogg.xcodeproj/project.xcworkspace/xcshareddata
+ios/build
+.DS_Store
